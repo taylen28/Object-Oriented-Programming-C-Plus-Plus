@@ -1,5 +1,5 @@
 /***
- *  {description}
+ *  {This is an intro to setup a github repository}
  ***/
 
 #include <iostream>
