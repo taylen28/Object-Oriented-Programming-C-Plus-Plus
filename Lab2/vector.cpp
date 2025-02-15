@@ -21,9 +21,9 @@ void printMemVec(const vector<int>& v) {
  * @param v - vector of integers (passed by reference)
  */
 void incVecBy10(vector<int>& v) {
-    for (int& num : v) 
+    for (size_t i = 0; i < v.size(); ++i) 
     {
-        num += 10;
+        i += 10;
     }
 }
 
