@@ -6,16 +6,22 @@ using namespace std;
 class Pet
 {
 
+    private:
+        string name;
+        int age;
+        string owner;
+        bool isHouseTrained;
+
     public:
 
         Pet();
-        Pet(string, int , string , bool);
+        Pet(string name, int age , string owner , bool isHouseTrained);
 
         //accessor functions
         string getName();
         int getAge();
         string getOwner();
-        string getIsHouseTrained();
+        bool getIsHouseTrained();
 
 
         //mutator functions
@@ -23,16 +29,6 @@ class Pet
         void updateAge();
         void updateOwner(string adopter);
         void setHouseTrained();
-
-
-
-
-
-    private:
-        string name;
-        int age;
-        string owner;
-        bool isHousedTrained;
 
         
 
