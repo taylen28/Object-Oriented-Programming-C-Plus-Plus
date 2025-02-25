@@ -1,47 +1,3 @@
-
-
-
-// string Pet::getName()
-// {
-//     return this->name;
-// }
-
-// int Pet::getAge()
-// {
-//     return this->age;
-// }
-
-// string Pet::getOwner()
-// {
-//     return this->owner;
-// }
-
-// bool Pet::getisHousedTrained()
-// {
-//     return this->isHousedTrained;
-// }
-
-// void Pet::updateName(string name)
-// {
-//     this->name = name;
-// }
-
-// void Pet::updateAge(int newAge)
-// {
-//     this->age = newAge;
-// }
-
-// void Pet::updateOwner(string adopter)
-// {
-//     this->owner = adopter;
-// }
-
-// void Pet::setHousedTrained(bool houseTrained)
-// {
-//     this->isHousedTrained = houseTrained;
-// }
-// Pet::~Pet(){}
-
 #include "Pet.h"
 
 // Default constructor
@@ -52,19 +8,19 @@ Pet::Pet(std::string name, int age, std::string owner, bool isHouseTrained)
     : name(name), age(age), owner(owner), isHouseTrained(isHouseTrained) {}
 
 // Getters
-std::string Pet::getName() const {
+std::string Pet::getName(){
     return name;
 }
 
-int Pet::getAge() const {
+int Pet::getAge(){
     return age;
 }
 
-std::string Pet::getOwner() const {
+std::string Pet::getOwner() {
     return owner;
 }
 
-bool Pet::getIsHouseTrained() const {
+bool Pet::getIsHouseTrained() {
     return isHouseTrained;
 }
 

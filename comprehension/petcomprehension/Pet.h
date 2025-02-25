@@ -15,14 +15,14 @@ class Pet
         string getName();
         int getAge();
         string getOwner();
-        string getisHousedTrained();
+        string getIsHouseTrained();
 
 
         //mutator functions
         void updateName(string name);
         void updateAge();
         void updateOwner(string adopter);
-        void setHousedTrained();
+        void setHouseTrained();
 
 
 
