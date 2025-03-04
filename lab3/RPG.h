@@ -11,10 +11,10 @@ class RPG
         RPG(string name, int health, int strength, int defense , string type);
         
         //setters
-        void setSkills();
-        void printAction(string action, RPG rpg);
-        void updateHealth(int health);
-        void attack(RPG* attack);
+        // void setSkills();
+        void printAction(string action, RPG rpg) ;
+        void updateHealth( int new_health);
+        // void attack(RPG* attack);
         void useSkill(RPG* skill);
 
         //getters
@@ -22,7 +22,6 @@ class RPG
         string getName() const;
         int getHealth() const;
         int getStrength() const;
-        Prismatic Evolution Super Premium Collection Pokemon Nintendo 02/28 08:00:00 PM EST
         int getDefense() const;
 
     private:
