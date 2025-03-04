@@ -1,14 +1,14 @@
-#ifndef _RPG_
-#define _RPG_
+#ifndef RPG_H
+#define RPG_H
 #include <iostream>
+#include <string>
 using namespace std;
-
 const int SKILL_SIZE = 2;
 class RPG
 {
     public:
         RPG();
-        RPG(string name, int health, int strength, int defense , string type);
+        RPG(std::string name, int health, int strength, int defense , std::string type);
         
         //setters
         // void setSkills();

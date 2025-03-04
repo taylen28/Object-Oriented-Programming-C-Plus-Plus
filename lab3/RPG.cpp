@@ -1,7 +1,6 @@
 #include "RPG.h"
 #include <iostream>
 
-using namespace std;
 
 RPG::RPG()
 {
@@ -13,7 +12,7 @@ RPG::RPG()
     skills[0] =  "slash";
     skills[1] = "parry";
 }
-RPG::RPG(string name, int health, int strength, int defense , string type)
+RPG::RPG(std::string name, int health, int strength, int defense , std::string type)
 {
     this->name = name;
     this->health = health;
