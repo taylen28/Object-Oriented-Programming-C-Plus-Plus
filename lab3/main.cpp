@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-#include "RPG.cpp"
+#include "RPG.h"
 int main()
 {
     RPG constructorObject;
