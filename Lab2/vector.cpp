@@ -23,7 +23,7 @@ void printMemVec(const vector<int>& v) {
 void incVecBy10(vector<int>& v) {
     for (size_t i = 0; i < v.size(); ++i) 
     {
-        i += 10;
+        v[i] += 10;
     }
 }
 
