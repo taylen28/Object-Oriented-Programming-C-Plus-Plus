@@ -6,8 +6,8 @@ RPG::RPG()
 {
     name = "NPC";
     health = 100;
-    strength = 10;
-    defense = 10;
+    strength = 50;
+    defense = 50;
     type = "warror ";
     skills[0] =  "slash";
     skills[1] = "parry";
@@ -19,25 +19,12 @@ RPG::RPG(std::string name, int health, int strength, int defense , std::string t
     this->strength = strength;
     this->defense = defense;
     this-> type = type;
-    // setSkills();
+     setSkills();
 }
 
 //setters
-// void RPG::setSkills(){
-
-// }
-void RPG::printAction(string skill, RPG opponent) 
-{
-    printf("%s used %s on %s\n", name.c_str(), skill.c_str(), opponent.getName()
-    .c_str());
-}
-
-
-// void RPG::attack(RPG* attack){
-
-// }
-void RPG::useSkill(RPG* skill)
-{
+ void RPG::setSkills()
+ {
     if (type == "mage") {
         skills[0] = "fire";
         skills[1] = "thunder";
@@ -52,7 +39,51 @@ void RPG::useSkill(RPG* skill)
             skills[0] = "slash";
             skills[1] = "parry";
         }
+}
+void RPG::printAction(string skill, RPG opponent) 
+{
+    printf("%s used %s on %s\n", name.c_str(), skill.c_str(), opponent.getName()
+    .c_str());
+}
+
+
+
+ void RPG::attack(RPG* opponent)
+{
+    int damage = strength - opponent->defense;
+    int newHealth = 0;
+    if(damage < 0)
+    {
+        newHealth = opponent->health - 0;
     }
+    else{
+        newHealth = opponent->health - damage;
+    }
+    opponent->updateHealth(newHealth);
+}
+
+
+void RPG::useSkill(RPG* opponent)
+{
+        for (int i = 0; i < SKILL_SIZE; i++) {
+            printf("Skill %i: %s\n", i, skills[i].c_str());
+        }
+    
+       
+        int chosen_skill_index;
+
+        cout << "Choose a skill to use: Enter 0 or 1\n";
+        cin >> chosen_skill_index;
+    
+        if (chosen_skill_index < 0 || chosen_skill_index >= SKILL_SIZE) {
+            cout << "Invalid choice. Defaulting to skill 0.\n";
+            chosen_skill_index = 0;
+        }
+
+        string chosen_skill = skills[chosen_skill_index];
+        printAction(chosen_skill, *opponent);
+        attack(opponent);
+}
 void RPG::updateHealth(int new_health)
 {
 /**
@@ -89,3 +120,4 @@ int RPG::getStrength() const{
 int RPG::getDefense() const{
     return defense;
 }
+

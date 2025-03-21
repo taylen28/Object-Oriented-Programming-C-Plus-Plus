@@ -33,7 +33,8 @@ void RPG::printAction(string skill, RPG opponent)
 }
 
 
-// void RPG::attack(RPG* attack){
+// void RPG::attack(RPG* attack)
+// {
 
 // }
 void RPG::useSkill(RPG* skill)

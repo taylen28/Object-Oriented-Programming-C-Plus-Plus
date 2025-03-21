@@ -11,11 +11,11 @@ class RPG
         RPG(std::string name, int health, int strength, int defense , std::string type);
         
         //setters
-        // void setSkills();
+        void setSkills();
         void printAction(string action, RPG rpg) ;
         void updateHealth( int new_health);
-        // void attack(RPG* attack);
-        void useSkill(RPG* skill);
+        void attack(RPG* opponent);
+        void useSkill(RPG* opponent);
 
         //getters
         bool isAlive() const;
@@ -23,6 +23,8 @@ class RPG
         int getHealth() const;
         int getStrength() const;
         int getDefense() const;
+
+        
 
     private:
         string name;
