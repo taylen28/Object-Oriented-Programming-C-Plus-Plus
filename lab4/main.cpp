@@ -39,14 +39,6 @@ void displayEnd(RPG player1, RPG player2)
 }
 int main()
 {
-    // RPG constructorObject;
-    // RPG overloadObject("Taylen", 4, 5, 4,  "Fire");
-    // RPG defender("defend", 100, 50, 2, "water" );
-
-    // cout << overloadObject.isAlive() << endl;
-    // overloadObject.updateHealth(4);
-    // cout << overloadObject.getHealth();
-
 
     RPG p1 = RPG("Wiz", 70, 45, 15, "mage");
     RPG p2 = RPG();
